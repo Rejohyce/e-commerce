@@ -1,0 +1,57 @@
+
+<div class="min-h-screen bg-slate-100">
+    <div class="">
+        <div class="ml-10 mr-10 bg-white pt-20 mt-16">
+           <p class="font-semibold text-3xl pl-16">PAYMENT METHOD</p> 
+           <div class="pt-14">
+            <div class="flex justify-between ml-16 mr-20">
+                <label for="cre">
+            <p><input type="checkbox" name="nip" class="outline-1 outline-orange-500"><span class="font-semibold  ml-4">Credit Card</span></p>
+        </label>
+            <div class=" flex space-x-5">
+                <i class="fab fa-cc-visa text-4xl"></i>
+                <i class="fab fa-cc-mastercard text-4xl"></i>
+                <i class="fab fa-cc-amazon-pay text-4xl"></i>
+            </div>
+        </div>
+           <div class="flex space-x-24 justify-center">
+            <div class="pt-10 pl-16">
+                <form action="">
+                    <label for="fname" class="bottom-4 opacity-60">CreditCard Name</label>
+                    <input type="text" id="fname" name="fname" placeholder="Mark Joe" required class="w-80 mb-8 h-12 rounded-md outline-none outline-slate-400 outline-1 block">
+                    <label for="num" class="bottom-4 opacity-60">Card Number</label>
+                    <input type="text" id="num" name="num" placeholder="345 4567 7890 1234" required class="w-80 mb-8 h-12 rounded-md outline-none outline-slate-400 outline-1 block">
+                    <div class="flex space-x-10">
+                        <div>
+                        <label for="expire" class="bottom-4 opacity-60">Expiry Date</label>
+                    <input type="date" id="expire" name="expire" placeholder="07/24" required class="w-44 mb-8 h-12 rounded-md outline-none outline-slate-400 outline-1 block">
+                </div>
+                <div>
+                    <label for="cvv" class="bottom-4 opacity-60">CVV Code</label>
+                <input type="password" id="cvv" name="cvv" placeholder="234" required class="w-40 mb-8 h-12 rounded-md outline-none outline-slate-400 outline-1 block">
+            </div>
+                    </div>
+                    <div class="">
+                        <button class="text-md font-semibold text-white w-44 rounded-lg h-12 bg-slate-700 duration-150 transition-all hover:bg-black hover:text-white ease-in-out"><a [routerLink]="['checkout']">Submit</a></button>
+                       </div>
+                </form>
+            </div>
+            <img src="assets/images/visa.png" class="w-fit .h-12 mt-7">
+        </div>
+           <div class="pt-14">
+            <p class="pb-8 text-2xl font-semibold ml-16 opacity-70">Or you can pay during delivey</p>
+            <div class="ml-16">
+                <label for="cre">
+            <input type="checkbox" name="cre"><span class="font-semibold  ml-4 ">Payment During Delivery</span>
+        </label>
+        </div>
+           </div>
+        </div>
+        <div class="ml-16 pt-14">
+            <p class="text-blue-600 font-semibold ">Disclamer*</p>
+            <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor sit amet consectetur adipisicing</p> 
+            <p class="text-sm">aliquam illo exein aspernatur fior</p>
+        </div>
+        </div>
+    </div>
+    </div>

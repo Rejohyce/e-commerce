@@ -1,0 +1,40 @@
+<div class="mt-20">
+    <h1 class="text-center text-4xl mb-8 text-black mt-24 dark:text-white">
+      FEATURED PRODUCT
+    </h1>
+  </div>
+  <div class="p-11">
+    <div>
+      <div class="grid grid-cols-4">
+        <div *ngFor="let product of productList.slice(0, 6)" [routerLink]="['/product', product.id]" class="p-11 cursor-pointer">
+          <div class="relative pl-11">
+            <img [src]="product.URL" class="relative w-80" />
+            <p
+              class="pt-2 rounded-full bg-slate-600 h-10 w-12 text-center absolute top-3 left-44"
+            >
+              Sale!
+            </p>
+          </div>
+          <p
+            class="text-black text-opacity-50 mt-3 dark:text-white pl-11 text-sm"
+          >
+          {{product.category}}
+          </p>
+          <p class="text-black dark:text-white mt-3 pl-11 text-sm">
+           <a>{{product.productName}}</a>
+          </p>
+          <div class="flex space-x-1 mt-1 pl-11 text-sm">
+            <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+            <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+            <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+            <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+            <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+            <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+          </div>
+          <p class="text-black dark:text-white font-bold mt-1 pl-11 text-sm">
+            <del class="text-opacity-30">{{product.oldPrice}}</del>&nbsp; &nbsp;{{product.newPrice}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,115 @@
+
+<div class="min-h-screen bg-slate-100">
+        <div class=" p-11 pt-36 flex space-x-8">
+             <div class="p-16 bg-white flex space-x-8">
+                <div>
+                <h1 class="text-4xl font-semibold pb-10">CART</h1>
+                <table class="w-full text-left text-md outline-none outline-1 outline-slate-400">
+                    <thead class="border-b bg-gray-300">
+                        <tr>
+                            <th scope="col" class="px-6 py-2"></th>
+                            <th scope="col" class="px-6 py-4">Product</th>
+                            <th scope="col" class="px-6 py-4">Price</th>
+                            <th scope="col" class="px-6 py-4">Quantity</th>
+                            <th scope="col" class="px-6 py-4">Subtotal</th>
+                            <th scope="col" class="px-6 py-4"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="mt-7 space-x-8">
+                        <tr  class="border-b transition duration-300 ease-in-out hover:bg-neutral-400 dark:border-neutral-300 dark:hover:bg-neutral-400">
+                            <th class=""><img src="assets/images/product-m-jeans1-600x600.jpg" alt="" class="w-20"></th>
+                            <th class="font-medium">Dark Brown Jeans</th>
+                            <th class="font-medium">$ 145.00</th>
+                            <th><div class="Quantity h-10 w-32">
+                                <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
+                                  <button data-action="decrement" class=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                                    <span class="m-auto text-2xl font-thin">−</span>
+                                  </button>
+                                  <input type="number" class="outline-none focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700" name="Quantity" value="0">
+                                <button data-action="increment" class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                                  <span class="m-auto text-2xl font-thin">+</span>
+                                </button>
+                              </div>
+                            </div>
+                            </th>
+                            <th class="font-medium">$290.00</th>
+                            <th class="font-medium"><i class="fa fa-window-close text-lg mr-52"></i></th>
+                        </tr>
+                        <tr  class="border-b transition duration-300 ease-in-out hover:bg-neutral-400 dark:border-neutral-300 dark:hover:bg-neutral-400">
+                            <th class=""><img src="assets/images/lgg.jpg" alt="" class="w-20"></th>
+                            <th class="font-medium">Women’s Jeans</th>
+                            <th class="font-medium">$ 145.00</th>
+                            <th><div class="Quantity h-10 w-32">
+                                <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
+                                  <button data-action="decrement" class=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                                    <span class="m-auto text-2xl font-thin">−</span>
+                                  </button>
+                                  <input type="number" class="outline-none focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700" name="Quantity" value="0">
+                                <button data-action="increment" class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                                  <span class="m-auto text-2xl font-thin">+</span>
+                                </button>
+                              </div>
+                            </div>
+                            </th>
+                            <th class="font-medium">$290.00</th>
+                            <th class="font-medium"><i class="fa fa-window-close text-lg mr-52"></i></th>
+                        </tr>
+                        <tr  class=" transition duration-300 ease-in-out hover:bg-neutral-400 dark:border-neutral-300 dark:hover:bg-neutral-400">
+                            <th class=""><img src="assets/images/blue.jpg" alt="" class="w-20"></th>
+                            <th class="font-medium">Accessories</th>
+                            <th class="font-medium">$ 145.00</th>
+                            <th><div class="Quantity h-10 w-32">
+                                <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
+                                  <button data-action="decrement" class=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                                    <span class="m-auto text-2xl font-thin">−</span>
+                                  </button>
+                                  <input type="number" class="outline-none focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700" name="Quantity" value="0">
+                                <button data-action="increment" class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                                  <span class="m-auto text-2xl font-thin">+</span>
+                                </button>
+                              </div>
+                            </div>
+                            </th>
+                            <th class="font-medium">$290.00</th>
+                            <th class="font-medium"><i class="fa fa-window-close text-lg mr-52"></i></th>
+                        </tr>
+                    </tbody>
+                </table>
+             </div>
+             <div>
+                <table class="text-left text-md outline-none outline-1 outline-slate-400 h-screen w-80">
+                    <thead class="border-b bg-gray-300 font-medium">
+                        <tr>
+                            <th scope="col" class="px-6 py-2">CART TOTALS</th>
+                        </tr>
+                    </thead>
+                    <tbody class="mt-7 space-x-8">
+                        <tr  class="border-b">
+                            <th class="pl-10 font-medium">Sub Total &nbsp; &nbsp;&nbsp;&nbsp; $320.00</th>
+                        </tr>
+                        <tr  class="border-b">
+                            <th class="pl-10 font-semibold">
+                                <h1>Shipping</h1> <p>
+                                    <br>Flat rate
+                                    <br>Shipping to 
+                                    <br>Nigeria
+                                    <p class="pt-6">Change address</p>
+                            </th>
+                        </tr>
+                        <tr  class=" border-b">
+                            <th class="pl-10 font-semibold">Total &nbsp; &nbsp; &nbsp; &nbsp; $320.00</th>
+                        </tr>
+                        <tr  class="">
+                            <th class="pl-10">
+                                <h1 class="pb-6 font-medium">Have a Coupon?</h1>
+                                <button class="w-56 h-16 align-middle text-lg text-white rounded-lg text-center bg-slate-700 transition-all duration-150  ease-in-out hover:bg-black">
+                                    <a routerLink="/checkout">CHECKOUT</a>
+                                </button>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+             </div>
+            </div>
+            </div>
+        </div>

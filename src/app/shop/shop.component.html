@@ -1,0 +1,59 @@
+<div class="min-h-screen bg-slate-100">
+        <div class="bg-white mt-32 ml-5 mr-5">
+           <div class="">
+            <h1 class="text-6xl pt-16 pb-12 pl-20 text-slate-700">SHOP</h1>
+            <div class="flex space-x-80 pl-20">
+                <div class="flex space-x-8">
+                    <div class="w-44 rounded-sm text-center bg-slate-700 h-12">
+                    <p class=" text-white text-1xl pt-3">☰ Filter</p>
+                </div>
+                    <p class="text-slate-800 text-lg pt-3">Showing 1–18 of 25 results</p>
+                </div>
+                <div class="flex text-black space-x-16  pb-10">
+                    <select value="Default Sorting" class="w-64 h-12 text-center bg-slate-50 text-md rounded-sm">
+                        <option name="popularity" id="popularity">Sort Women</option>
+                        <option name="popularity" id="popularity">Men</option>
+                        <option name="popularity" id="popularity">Sort By Latest</option>
+                        <option name="popularity" id="popularity">Sort By Price: Low Price</option>
+                        <option name="popularity" id="popularity">Sort By Price: High Price</option>
+                    </select>
+                    <div class=" text-black flex space-x-5 pt-5">
+                        <i class="fas fa-th-large"></i>
+                        <i class="fas fa-th-list"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="ml-20"> 
+                <form action="">
+                <input type="search" name="search" placeholder="search" class="w-40 h-10 rounded-sm outline-none outline-slate-400 outline-1">
+                <input type="submit" class="bg-slate-700 w-28 h-10 rounded-sm text-white ml-10">
+            </form>
+            </div>
+            <div class="p-11 text-white">
+                <div>
+                    <div class="grid grid-cols-4">
+                        <div *ngFor="let product of productList" [routerLink]="['/product', product.id]" class="p-11">
+                            <div class="relative pl-11">
+                    <a>
+                    <img [src]="product.URL" class="relative w-80 transition duration-300 ease-in-out hover:scale-110">
+                </a>
+                    <p class="pt-2 rounded-full bg-slate-600 h-10 w-12 text-center  absolute top-3 left-44">Sale!</p>
+                </div>
+                     <p class="text-black text-opacity-50 mt-3 dark:text-black pl-11 text-sm"><a>{{product.category}}</a></p>
+                     <p class="text-black dark:text-black mt-3 pl-11 text-sm"><a>{{product.productName}}</a></p>
+                <div class="flex space-x-1 mt-1 pl-11 text-sm">
+                      <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+                     <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+                     <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+                     <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+                     <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+                     <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+                </div>
+                     <p class="text-black dark:text-black font-bold mt-1 pl-11 text-sm"><del class="text-opacity-30"><a>{{product.oldPrice}}</a></del>&nbsp; &nbsp;<a>{{product.newPrice}}</a></p>
+            </div>
+            </div>
+            </div>
+            </div>
+        </div>
+        </div>
+

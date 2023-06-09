@@ -1,0 +1,274 @@
+<div class="min-h-screen bg-slate-100">
+  <div class="bg-white pl-11 mt-20">
+    <div class="">
+      <div class="flex space-x-24">
+        <div class="pt-14">
+          <img
+            [src]="productDetails.URL"
+            class="w-96 transition duration-300 ease-in-out hover:scale-110 relative"
+          />
+        </div>
+        <div>
+          <div class="flex space-x-20 pt-14 cursor-pointer">
+            <p class="">
+              Home / <a>{{ productDetails.category }}</a
+              >/ <a>{{ productDetails.productName }}</a>
+            </p>
+            <p class="space-x-20">
+              <i class="fa fa-chevron-left" aria-hidden="true"></i
+              ><i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </p>
+          </div>
+          <p class="pt-6 font-bold text-xl">
+            <del class="opacity-60 cursor-pointer"
+              ><a *ngIf="productDetails.oldPrice">{{ productDetails.oldPrice }}</a></del
+            >
+            &nbsp; &nbsp; <a>{{ productDetails.newPrice }}</a>
+          </p>
+          <br />Nam nec tellus a odio tincidunt auctor a ornare odio. Sed
+          <br />non mauris vitae erat consequat auctor eu in elit. Class
+          <br />aptent taciti sociosqu ad litora torquent per conubia nostra,
+          <br />
+          per inceptos himenaeos. Mauris in erat justo. Nullam ac <br />urna eu
+          felis dapibus condimentum sit amet a augue. Sed <br />non neque elit
+          sed.
+          <div class="flex space-x-6 pt-4">
+            <p class="font-semibold">Availability:</p>
+            <p class="text-blue-700 font-semibold cursor-pointer">
+              <a>{{ productDetails.stockAvailability }}</a>
+            </p>
+          </div>
+          <div class="flex space-x-10 pt-6">
+            <div class="Quantity h-10 w-32">
+              <div
+                class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1"
+              >
+                <button
+                  data-action="decrement"
+                  class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none"
+                >
+                  <span class="m-auto text-2xl font-thin">−</span>
+                </button>
+                <input
+                  type="number"
+                  class="outline-none focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black md:text-basecursor-default flex items-center text-gray-700"
+                  name="Quantity"
+                  value="0"
+                />
+                <button
+                  data-action="increment"
+                  class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer"
+                >
+                  <span class="m-auto text-2xl font-thin">+</span>
+                </button>
+              </div>
+            </div>
+            <button
+              class="w-56 h-12 mb-4 align-middle text-lg text-white rounded-lg text-center bg-slate-700 transition-all duration-150 ease-in-out hover:bg-black"
+            >
+              <a routerLink="/cart" (click)="addToCart('product.productId')">Add To Cart</a>
+            </button>
+          </div>
+          <p class="border-b w-full text-2xl text-black"></p>
+          <p class="font-medium text-md pt-4 cursor-pointer">
+            Categories: &nbsp; <a>{{ productDetails.category }}</a>
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="flex pt-7 space-x-24 pl-16 pr-16">
+          <p class="font-bold text-2xl">Description</p>
+          <p
+            class="hover:hidden transition-all duration-150 ease-in-out cursor-pointer"
+            id="desc"
+          >
+            <a>{{ productDetails.description }}</a>
+          </p>
+        </div>
+        <div class="flex pt-7 space-x-24 pl-16 pr-16">
+          <p class="font-bold text-2xl pt-11">Color Design</p>
+          <div
+            class="hover:blue transition-all duration-150 ease-in-out flex space-x-10 pt-12 cursor-pointer"
+            id="colo"
+          >
+            <p class="text-blue-700 cursor-pointer">
+              <a *ngFor="let color of productDetails.color"> {{ color }} </a>
+            </p>
+          </div>
+        </div>
+        <div class="flex pt-7 space-x-24 pl-16 pr-16">
+          <p class="font-bold text-2xl pt-11">Sizes</p>
+          <div
+            class="hover:blue transition-all duration-150 ease-in-out flex space-x-10 pt-12"
+            id="colo"
+          >
+            <p class="text-blue-700 cursor-pointer">
+              <a *ngFor="let size of productDetails.size"> {{ size }} </a>
+            </p>
+          </div>
+        </div>
+        <div class="pl-16">
+          <p class="font-bold text-2xl pb-4 pl-16 pt-11">Review(1)</p>
+          <div class="flex space-x-11 pl-20">
+            <i class="fa fa-user-circle text-5xl" aria-hidden="true"></i>
+            <div>
+              <p class="font-semibold text-xl opacity-60">Jessie Justin</p>
+              <div class="flex space-x-1">
+                <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+                <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+                <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+                <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+              </div>
+              <p class="">The product is great and i love the quality</p>
+            </div>
+          </div>
+          <div class="pt-14 pl-20 border-black">
+            <p class="text-2xl opacity-60 pb-7 border-b">ADD A REVIEW</p>
+            <div class="flex space-x-1">
+              <p class="text-xl opacity-60">Rate:</p>
+              <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+              <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+              <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+              <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+            </div>
+            <div class="pt-6">
+              <form>
+                <div class="flex space-x-14">
+                  <div>
+                    <label for="fname">Enter Your Name (Required)</label>
+                    <input
+                      type="text"
+                      id="fname"
+                      name="firstname"
+                      placeholder="Your name.."
+                      required
+                      class="w-72 mt-3 mb-8 h-12 rounded-md outline-none outline-slate-400 outline-1 block"
+                    />
+                  </div>
+                  <div>
+                    <label for="email">Your Email (Required)</label>
+                    <input
+                      type="text"
+                      id="email"
+                      name="email"
+                      placeholder="Enter address.."
+                      required
+                      class="w-72 mt-3 h-12 mb-8 rounded-md bg-slate-500 border-0 block outline-none outline-slate-400 outline-1"
+                    />
+                  </div>
+                </div>
+                <label for="message">Your Review</label>
+                <textarea
+                  name="message"
+                  id="message "
+                  class="w-96 h-32 mt-3 rounded-lg outline-none outline-slate-400 outline-1 border-0 block mb-8"
+                  rows="6"
+                ></textarea>
+                <button
+                  type="submit"
+                  class="w-28 text-center text-white h-12 bg-black transition-all duration-75 ease-in-out hover:to-blue-800 mt-8 rounded-sm block"
+                >
+                  <a href="https://validator.w3.org/">Send</a>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="font-semibold text-3xl text-center pl-20 pt-16">
+        Related Product
+      </p>
+      <div class="flex justify-between text-white">
+        <div class="p-11">
+          <div class="relative pl-11">
+            <a href="halve.html">
+              <img
+                src="assets/images/half.jpg"
+                class="relative touch-pinch-zoom w-80 transition duration-300 ease-in-out hover:scale-110"
+              />
+            </a>
+          </div>
+          <p
+            class="text-black text-opacity-50 mt-3 dark:text-black pl-11 text-sm"
+          >
+            Men’s Jeans
+          </p>
+          <p class="text-black dark:text-black mt-3 pl-11 text-sm">
+            FAINT BLUE JEAN
+          </p>
+          <div class="flex space-x-1 mt-1 pl-11 text-sm">
+            <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+            <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+            <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+            <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+            <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+            <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+          </div>
+          <p class="text-black dark:text-black font-bold mt-1 pl-11 text-sm">
+            <del class="text-opacity-30">$12.00</del>&nbsp; &nbsp;$10.00
+          </p>
+        </div>
+        <div class="p-11">
+          <div class="relative pl-11">
+            <a href="wash.html">
+              <img
+                src="assets/images/washed.jpg"
+                class="relative touch-pinch-zoom w-80 transition duration-300 ease-in-out hover:scale-110"
+              />
+            </a>
+          </div>
+          <p
+            class="text-black text-opacity-50 mt-3 dark:text-black pl-11 text-sm"
+          >
+            Men’s Jeans
+          </p>
+          <p class="text-black dark:text-black mt-3 pl-11 text-sm">
+            FAINT BLUE JEAN
+          </p>
+          <div class="flex space-x-1 mt-1 pl-11 text-sm">
+            <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+            <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+            <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+            <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+            <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+            <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+          </div>
+          <p class="text-black dark:text-black font-bold mt-1 pl-11 text-sm">
+            <del class="text-opacity-30">$12.00</del>&nbsp; &nbsp;$10.00
+          </p>
+        </div>
+        <div class="p-11">
+          <div class="relative pl-11">
+            <a href="dark.html">
+              <img
+                src="assets/images/hang.jpg"
+                class="relative touch-pinch-zoom w-80 transition duration-300 ease-in-out hover:scale-110"
+              />
+            </a>
+          </div>
+          <p
+            class="text-black text-opacity-50 mt-3 dark:text-black pl-11 text-sm"
+          >
+            Men’s Jeans
+          </p>
+          <p class="text-black dark:text-black mt-3 pl-11 text-sm">
+            DENIM BLUE JEAN
+          </p>
+          <div class="flex space-x-1 mt-1 pl-11 text-sm">
+            <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+            <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+            <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+            <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+            <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+            <p class="text-yellow-400"><i class="fas fa-star"></i></p>
+          </div>
+          <p class="text-black dark:text-black font-bold mt-1 pl-11 text-sm">
+            <del class="text-opacity-30">$12.00</del>&nbsp; &nbsp;$10.00
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
